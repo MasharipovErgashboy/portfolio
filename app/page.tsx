@@ -624,7 +624,7 @@ const universities = [
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="text-blue-100 text-sm">Book Readers</p>
-                            <p className="text-3xl font-bold">5000+</p>
+                            <p className="text-3xl font-bold">500+</p>
                           </div>
                           <BookOpen className="w-8 h-8 text-blue-200" />
                         </div>
