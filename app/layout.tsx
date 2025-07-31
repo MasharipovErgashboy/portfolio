@@ -23,16 +23,12 @@ export default function RootLayout({
       <head>
         {/* SEO: Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourdomain.com" />
+        <meta property="og:url" content="https://ergashboy.uz" />
         <meta property="og:title" content="Ergashboy Masharipov — Full Stack Developer" />
         <meta property="og:description" content="Full Stack Developer | Node.js, React, UI/UX & More" />
-        <meta property="og:image" content="https://yourdomain.com/profile-image.png" />
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ergashboy Masharipov — Full Stack Developer" />
-        <meta name="twitter:description" content="Full Stack Developer | Node.js, React, UI/UX & More" />
-        <meta name="twitter:image" content="https://yourdomain.com/profile-image.png" />
+
+       
 
         {/* Structured Data */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
@@ -40,13 +36,8 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Ergashboy Masharipov",
-            "url": "https://yourdomain.com",
-            "image": "https://yourdomain.com/profile-image.png",
+            "url": "https://ergashboy.uz",
             "jobTitle": "Full Stack Developer",
-            "sameAs": [
-              "https://linkedin.com/in/yourusername",
-              "https://github.com/yourusername"
-            ]
           })
         }} />
       </head>
