@@ -1,0 +1,20 @@
+{
+  "home": "Bosh sahifa",
+  "about": "Men haqimda",
+  "services": "Xizmatlar",
+  "skills": "Ko'nikmalar",
+  "portfolio": "Portfolio",
+  "contact": "Bog'lanish",
+  "i_am": "Men",
+  "web_developer": "veb dasturchiman",
+  "cv_button": "CV ni yuklab olish",
+  "know_me": "Men haqimda",
+  "about_description": "Men Frontend va Backend bo‘yicha tajribaga ega veb dasturchiman.",
+  "services_title": "Xizmatlarim",
+  "portfolio_title": "Portfolio",
+  "contact_title": "Bog'lanish uchun murojaat qiling",
+  "contact_name": "Ismingiz",
+  "contact_email": "Email manzilingiz",
+  "contact_message": "Xabaringiz",
+  "send_button": "Yuborish"
+}

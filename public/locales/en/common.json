@@ -1,0 +1,20 @@
+{
+  "home": "Home",
+  "about": "About",
+  "services": "Services",
+  "skills": "Skills",
+  "portfolio": "Portfolio",
+  "contact": "Contact",
+  "i_am": "I am",
+  "web_developer": "a web developer",
+  "cv_button": "Download CV",
+  "know_me": "About Me",
+  "about_description": "I am a web developer with experience in Frontend and Backend.",
+  "services_title": "My Services",
+  "portfolio_title": "Portfolio",
+  "contact_title": "Get in Touch",
+  "contact_name": "Your Name",
+  "contact_email": "Your Email",
+  "contact_message": "Your Message",
+  "send_button": "Send"
+}

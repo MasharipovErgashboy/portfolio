@@ -1,0 +1,20 @@
+{
+  "home": "Главная",
+  "about": "Обо мне",
+  "services": "Услуги",
+  "skills": "Навыки",
+  "portfolio": "Портфолио",
+  "contact": "Контакты",
+  "i_am": "Я",
+  "web_developer": "веб-разработчик",
+  "cv_button": "Скачать резюме",
+  "know_me": "Обо мне",
+  "about_description": "Я веб-разработчик с опытом во Frontend и Backend.",
+  "services_title": "Мои услуги",
+  "portfolio_title": "Портфолио",
+  "contact_title": "Свяжитесь со мной",
+  "contact_name": "Ваше имя",
+  "contact_email": "Ваш email",
+  "contact_message": "Ваше сообщение",
+  "send_button": "Отправить"
+}

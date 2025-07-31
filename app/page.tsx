@@ -449,15 +449,15 @@ const universities = [
                   <div className="space-y-3">
                     <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                       <Mail className="w-5 h-5 text-gray-500 dark:text-gray-400 mr-3" />
-                      <span className="text-sm">ergashboy@example.com</span>
+                      <span className="text-sm">ergashmasharipov88@gmail.com</span>
                     </div>
                     <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                       <Phone className="w-5 h-5 text-gray-500 dark:text-gray-400 mr-3" />
-                      <span className="text-sm">+998 90 123 45 67</span>
+                      <span className="text-sm">+998 88 709 50 66</span>
                     </div>
                     <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                       <MapPin className="w-5 h-5 text-gray-500 dark:text-gray-400 mr-3" />
-                      <span className="text-sm">Uzbekistan / Japan</span>
+                      <span className="text-sm">Uzbekistan / Tashkent</span>
                     </div>
                   </div>
                 </motion.div>
@@ -591,7 +591,7 @@ const universities = [
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => window.open("mailto:ergashboy@example.com")}
+                  onClick={() => window.open("ergashmasharipov88@gmail.com")}
                   className="dark:border-gray-600 dark:hover:bg-gray-700"
                 >
                   <Mail className="w-4 h-4 mr-2" />
