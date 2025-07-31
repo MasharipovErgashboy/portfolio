@@ -54,7 +54,7 @@ export default function Portfolio() {
     {
       company: "Freelance",
       position: "UI/UX Designer & Developer",
-      period: "2024 - 2025",
+      period: "2022 - 2025",
       logo: "/placeholder.svg?height=32&width=32&text=FL",
       description: "Mobile and web application design projects",
     },
