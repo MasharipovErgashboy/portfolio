@@ -64,7 +64,7 @@ export default function OverviewPage() {
 
     // Backend
     { name: "Node.js", level: 90, category: "backend", icon: <img src="/nodeJs.png" alt="Vue.js" className="w-6 h-6" /> },
-    { name: "Laravel", level: 82, category: "backend", icon: <img src="/laravel.png" alt="Vue.js" className="w-6 h-6" /> },
+    { name: "Laravel", level: 82, category: "backend", icon: <img src="/Laravel.png" alt="Vue.js" className="w-6 h-6" /> },
     { name: "PHP", level: 80, category: "backend", icon: <img src="/php.png" alt="Vue.js" className="w-6 h-6" /> },
     { name: "Python", level: 85, category: "backend", icon: <img src="/python.png" alt="Vue.js" className="w-6 h-6" /> },
     { name: "Django", level: 78, category: "backend", icon: <img src="/django.png" alt="Vue.js" className="w-6 h-6" /> },
