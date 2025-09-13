@@ -222,7 +222,7 @@ export default function OverviewPage() {
               <div className="lg:col-span-2">
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                   Creating innovative digital solutions while pursuing degrees in IT, Psychology, and Linguistics across
-                  Japan and Uzbekistan. Author of Japanese learning book with 5000+ readers.
+                  Japan and Uzbekistan. Author of Japanese learning book with 500+ readers.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                   I specialize in full-stack development, UI/UX design, and creating educational platforms that bridge
