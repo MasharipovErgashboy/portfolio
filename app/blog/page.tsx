@@ -15,57 +15,13 @@ export default function BlogPage() {
     {
       title: "My Journey Across Three Universities",
       excerpt: "How I'm managing simultaneous studies in IT, Psychology, and Linguistics across Japan and Uzbekistan",
-      date: "2024-01-15",
+      date: "2025-09-13",
       category: "personal",
       readTime: "5 min read",
-      image: "/placeholder.svg?height=200&width=300&text=University+Journey",
-      telegramUrl: "https://t.me/your_username", // 🔗 Telegram link
+      image: "/kkkk.png",
+      telegramUrl: "https://t.me/su_academya", // 🔗 Telegram link
     },
-    {
-      title: "Building SU Academy: From Idea to 5000+ Users",
-      excerpt: "The complete story behind creating a Japanese learning platform that reached thousands of learners",
-      date: "2024-01-10",
-      category: "personal",
-      readTime: "8 min read",
-      image: "/placeholder.svg?height=200&width=300&text=SU+Academy+Story",
-      telegramUrl: "https://t.me/your_username",
-    },
-    {
-      title: "The Future of AI in Language Learning",
-      excerpt: "How artificial intelligence is revolutionizing the way we learn and teach languages",
-      date: "2024-01-05",
-      category: "technology",
-      readTime: "6 min read",
-      image: "/placeholder.svg?height=200&width=300&text=AI+Language",
-      telegramUrl: "https://t.me/your_username",
-    },
-    {
-      title: "Study Tips for Multi-University Students",
-      excerpt: "Practical advice for managing multiple degree programs simultaneously",
-      date: "2023-12-20",
-      category: "education",
-      readTime: "7 min read",
-      image: "/placeholder.svg?height=200&width=300&text=Study+Tips",
-      telegramUrl: "https://t.me/your_username",
-    },
-    {
-      title: "React vs Vue: A Developer's Perspective",
-      excerpt: "Comparing two popular frontend frameworks based on real project experience",
-      date: "2023-12-15",
-      category: "technology",
-      readTime: "10 min read",
-      image: "/placeholder.svg?height=200&width=300&text=React+vs+Vue",
-      telegramUrl: "https://t.me/your_username",
-    },
-    {
-      title: "Living and Studying in Japan as an Uzbek Student",
-      excerpt: "Cultural insights and practical tips for international students in Japan",
-      date: "2023-12-10",
-      category: "personal",
-      readTime: "9 min read",
-      image: "/placeholder.svg?height=200&width=300&text=Japan+Life",
-      telegramUrl: "https://t.me/your_username",
-    },
+
   ]
 
   const blogCategories = [

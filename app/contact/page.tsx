@@ -79,11 +79,11 @@ export default function ContactPage() {
     <CardContent className="space-y-4">
       <div className="flex items-center space-x-3">
         <Mail className="w-4 h-4 text-blue-500" />
-        <span>your@email.com</span>
+        <span>ergashmasharipov88@gmail.com</span>
       </div>
       <div className="flex items-center space-x-3">
         <Phone className="w-4 h-4 text-green-500" />
-        <span>+998 90 123 45 67</span>
+        <span>+998 88 709 50 66</span>
       </div>
       <div className="flex items-center space-x-3">
         <MapPin className="w-4 h-4 text-red-500" />
@@ -104,7 +104,7 @@ export default function ContactPage() {
       <div className="flex justify-center md:justify-start space-x-6">
         {/* GitHub */}
         <motion.a
-          href="https://github.com"
+          href="https://github.com/MasharipovErgashboy"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.2, rotate: 5 }}
@@ -116,7 +116,7 @@ export default function ContactPage() {
 
         {/* LinkedIn */}
         <motion.a
-          href="https://linkedin.com"
+          href="www.linkedin.com/in/ergashboy-masharipov-0a9820298"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.2, rotate: -5 }}
@@ -128,7 +128,7 @@ export default function ContactPage() {
 
         {/* Instagram */}
         <motion.a
-          href="https://instagram.com"
+          href="https://www.instagram.com/iam_masharipov/"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.2, rotate: 5 }}

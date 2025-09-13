@@ -18,7 +18,7 @@ export default function WorkPage() {
       features: ["25 Topic Modules", "AI Chat Integration", "E-book Access"],
       tech: ["Figma", "UI/UX", "System Design"],
       type: "Platform Design",
-      projectUrl: "https://github.com/yourusername/su-academy-web",
+      projectUrl: "https://www.figma.com/proto/k4F9bAcpAdNWlIBWK7AZkB/Shaxsiy-kitobim?page-id=0%3A1&node-id=126-626&viewport=361%2C363%2C0.02&t=4oImui3XcvnAEj7V-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A209",
     },
     {
       title: "SU Academy Mobile App",
@@ -30,7 +30,7 @@ export default function WorkPage() {
       features: ["Offline Learning", "Progress Tracking", "Native Experience"],
       tech: ["Figma", "Mobile UI", "UX Research"],
       type: "Mobile Design",
-      projectUrl: "https://github.com/yourusername/su-academy-mobile",
+      projectUrl: "https://www.figma.com/proto/k4F9bAcpAdNWlIBWK7AZkB/Shaxsiy-kitobim?page-id=1%3A245&node-id=1-286&viewport=491%2C-1014%2C0.25&t=OlnGiP3QzBmI8DHB-1&scaling=min-zoom&content-scaling=fixed",
     },
     {
       title: "SU Academy Development",
@@ -42,7 +42,7 @@ export default function WorkPage() {
       features: ["Real-time Chat", "AI Tutoring", "Progress Analytics"],
       tech: ["React.js", "Node.js", "AI Integration"],
       type: "Full Stack",
-      projectUrl: "https://github.com/yourusername/su-academy-fullstack",
+      projectUrl: "https://github.com/MasharipovErgashboy/su_academy.git",
     },
     {
       title: "Maydon.uz",
@@ -54,7 +54,7 @@ export default function WorkPage() {
       features: ["Online Booking", "Payment Integration", "Admin Dashboard"],
       tech: ["Figma", "System Design", "Admin Panel"],
       type: "Platform Design",
-      projectUrl: "https://github.com/yourusername/maydon-uz",
+      projectUrl: "https://www.figma.com/proto/NPMY3Mtwq5A6FPterjt1rO/Stadion-zakaz-qilish?page-id=1%3A1844&node-id=1-2863&viewport=346%2C102%2C0.26&t=wgmpmtcU7ixQDpFd-1&scaling=min-zoom&content-scaling=fixed",
     },
     {
       title: "EcoSoil",
@@ -66,7 +66,7 @@ export default function WorkPage() {
       features: ["AI Diagnosis", "Crop Analysis", "Soil Testing"],
       tech: ["Figma", "AI/ML Design", "Admin Panel"],
       type: "AI Platform",
-      projectUrl: "https://www.ergashboy.uz/",
+      projectUrl: "https://www.figma.com/proto/ESIwqwEafSTHDvgE6g7Ypi/EcoSoil?page-id=0%3A1&node-id=1-5&viewport=35%2C318%2C0.09&t=N6OWNLTaxcBbfHRW-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=92%3A147",
     },
     {
       title: "TAS Capital Partners",
@@ -78,7 +78,7 @@ export default function WorkPage() {
       features: ["Corporate Identity", "Responsive Design", "Multi-language"],
       tech: ["Figma", "Corporate Design", "UI/UX"],
       type: "Corporate Website",
-      projectUrl: "https://github.com/yourusername/tas-capital",
+      projectUrl: "https://tas-cp.uz/",
     },
     {
       title: "Japanese Learning Book",
@@ -90,7 +90,7 @@ export default function WorkPage() {
       features: ["Professional Layout", "Bilingual Design", "Print Ready"],
       tech: ["Book Design", "Layout", "Typography"],
       type: "Book Design",
-      projectUrl: "https://github.com/yourusername/japanese-learning-book",
+      projectUrl: "https://asaxiy.uz/uz/product/ergashboy-masharipov-bir-kunda-bir-suhbat-yapon-tilida-urganing",
     },
   ]
 

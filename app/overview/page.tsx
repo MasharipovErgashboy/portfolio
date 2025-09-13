@@ -367,12 +367,13 @@ export default function OverviewPage() {
                     size="sm"
                     className="border-white/30 text-white hover:bg-white/10 bg-transparent flex items-center justify-center space-x-2 text-xs"
                     onClick={() => {
-                      alert("Kitobning bir nechta sahifasini online o'qish...")
+                      window.open("https://t.me/su_academya", "_blank")
                     }}
                   >
                     <Eye className="w-3 h-3" />
                     <span>Online o'qish</span>
                   </Button>
+
                 </div>
               </div>
             </div>

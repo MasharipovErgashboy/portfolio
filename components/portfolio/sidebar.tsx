@@ -74,7 +74,7 @@ export default function Sidebar({
               <div className="relative w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-[2px] shadow-xl hover:scale-105 transition-transform duration-300">
                 <div className="w-full h-full rounded-full bg-white overflow-hidden">
                   <img
-                    src="/photo_2024-12-27_18-18-25.jpg"
+                    src="/kkkk.png"
                     alt="User"
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
