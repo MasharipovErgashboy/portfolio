@@ -65,9 +65,9 @@ export default function OverviewPage() {
     // Backend
     { name: "Node.js", level: 90, category: "backend", icon: <img src="/nodeJs.png" alt="Vue.js" className="w-6 h-6" /> },
     { name: "Laravel", level: 82, category: "backend", icon: <img src="/Laravel.png" alt="Vue.js" className="w-6 h-6" /> },
-    { name: "PHP", level: 80, category: "backend", icon: <img src="/php.png" alt="Vue.js" className="w-6 h-6" /> },
+    { name: "PHP", level: 80, category: "backend", icon: <img src="/Php.png" alt="Vue.js" className="w-6 h-6" /> },
     { name: "Python", level: 85, category: "backend", icon: <img src="/python.png" alt="Vue.js" className="w-6 h-6" /> },
-    { name: "Django", level: 78, category: "backend", icon: <img src="/django.png" alt="Vue.js" className="w-6 h-6" /> },
+    { name: "Django", level: 78, category: "backend", icon: <img src="/Django.png" alt="Vue.js" className="w-6 h-6" /> },
 
     // Database
     { name: "MySQL", level: 85, category: "database", icon: <img src="/MySQL.png" alt="Vue.js" className="w-6 h-6" /> },
@@ -78,7 +78,7 @@ export default function OverviewPage() {
     { name: "Figma", level: 92, category: "design", icon: <img src="/figma.png" alt="Vue.js" className="w-6 h-6" /> },
     { name: "Adobe XD", level: 85, category: "design", icon: <img src="/Adobe_Xd.png" alt="Vue.js" className="w-6 h-6" /> },
     { name: "UI/UX Design", level: 88, category: "design", icon: <img src="/ui_ux.png" alt="Vue.js" className="w-6 h-6" /> },
-    { name: "Prototyping", level: 90, category: "design", icon: <img src="/prototyping.png" alt="Vue.js" className="w-6 h-6" /> },
+    { name: "Prototyping", level: 90, category: "design", icon: <img src="/Prototyping.png" alt="Vue.js" className="w-6 h-6" /> },
 
 
     // Languages
