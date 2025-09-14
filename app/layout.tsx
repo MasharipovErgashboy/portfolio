@@ -8,7 +8,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Ergashboy Masharipov",
   description: "Full Stack Developer & UI/UX Designer",
-  generator: "v0.app",
   authors: [{ name: "Ergashboy Masharipov", url: "https://ergashboy.uz" }],
   keywords: ["Ergashboy Masharipov", "Full Stack Developer", "UI/UX Designer"],
   openGraph: {
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "Ergashboy Masharipov",
     images: [
       {
-        url: "https://ergashboy.uz/kkkk.png", // Saytingizga qo'yilgan profil rasmi
+        url: "https://ergashboy.uz/kkkk.png",
         width: 600,
         height: 600,
         alt: "Ergashboy Masharipov",
@@ -37,6 +36,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicon qo'shish */}
+        <link rel="icon" href="/montenegro.png" type="image/png" sizes="32x32" />
+
         {/* JSON-LD Schema Markup */}
         <script
           type="application/ld+json"
@@ -50,7 +52,7 @@ export default function RootLayout({
               sameAs: [
                 "https://github.com/MasharipovErgashboy",
                 "https://www.linkedin.com/in/ergashboy-masharipov-0a9820298/",
-                "https://www.instagram.com/iam_masharipov/"
+                "https://www.instagram.com/iam_masharipov/",
               ],
               jobTitle: "Full Stack Developer & UI/UX Designer",
               worksFor: {
