@@ -8,7 +8,25 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Ergashboy Masharipov",
   description: "Full Stack Developer & UI/UX Designer",
-    generator: 'v0.app'
+  generator: "v0.app",
+  authors: [{ name: "Ergashboy Masharipov", url: "https://ergashboy.uz" }],
+  keywords: ["Ergashboy Masharipov", "Full Stack Developer", "UI/UX Designer"],
+  openGraph: {
+    title: "Ergashboy Masharipov",
+    description: "Full Stack Developer & UI/UX Designer",
+    url: "https://ergashboy.uz",
+    siteName: "Ergashboy Masharipov",
+    images: [
+      {
+        url: "https://ergashboy.uz/kkkk.png", // Saytingizga qo'yilgan profil rasmi
+        width: 600,
+        height: 600,
+        alt: "Ergashboy Masharipov",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
@@ -18,6 +36,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* JSON-LD Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ergashboy Masharipov",
+              url: "https://ergashboy.uz",
+              image: "https://ergashboy.uz/kkkk.png",
+              sameAs: [
+                "https://github.com/MasharipovErgashboy",
+                "https://www.linkedin.com/in/ergashboy-masharipov-0a9820298/",
+                "https://www.instagram.com/iam_masharipov/"
+              ],
+              jobTitle: "Full Stack Developer & UI/UX Designer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Freelancer",
+              },
+            }),
+          }}
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
