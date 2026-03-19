@@ -1,7 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
+import "../globals.css"
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -28,13 +31,30 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+import { notFound } from "next/navigation"
+
+const locales = ["uz", "ru", "en", "jp"]
+
+export default async function RootLayout({
   children,
+  params: { locale }
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
+  params: { locale: string };
 }) {
+  if (!locales.includes(locale)) {
+    notFound()
+  }
+
+  let messages
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default
+  } catch (error) {
+    messages = (await import(`../../messages/uz.json`)).default
+  }
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         {/* Favicon qo'shish */}
         <link rel="icon" href="/montenegro.png" type="image/png" sizes="32x32" />
@@ -63,7 +83,18 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider 
+            attribute="class" 
+            defaultTheme="system" 
+            enableSystem 
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
+      </body>
     </html>
   )
 }

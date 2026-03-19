@@ -1,0 +1,154 @@
+{
+  "Sidebar": {
+    "overview": "概要",
+    "work": "作品",
+    "education": "教育",
+    "blog": "ブログ",
+    "contact": "お問い合わせ",
+    "contact_title": "連絡先",
+    "follow_title": "フォロー",
+    "language_title": "言語",
+    "role": "フルスタック開発者",
+    "badge": "複数大学在籍中",
+    "download_cv": "履歴書をDL",
+    "contact_btn": "連絡",
+    "page_subtitles": {
+      "overview": "個人情報とスキルの概要",
+      "work": "プロジェクトと実績のポートフォリオ",
+      "education": "学歴と資格",
+      "blog": "最新の考えと洞察",
+      "contact": "お問い合わせ"
+    }
+  },
+  "Overview": {
+    "stats": {
+      "total_projects": "合計プロジェクト",
+      "happy_clients": "満足したクライアント",
+      "completed": "完了済み",
+      "success_rate": "成功率"
+    },
+    "about": {
+      "title": "紹介",
+      "focus": "現在の焦点",
+      "available": "対応可能",
+      "subtitle": "フルスタックデベロッパー ＆ UI/UXデザイナー",
+      "description1": "日本とウズベキスタンでIT、心理学、言語学の学位を取得しながら、革新的なデジタルソリューションを作成しています。500人以上の読者がいる日本語学習本の著者です。",
+      "description2": "私はフルスタック開発、UI/UXデザイン、そして言語の壁や文化的なギャップを埋める教育プラットフォームの作成を専門としています。私の仕事は、技術的な専門知識とユーザー心理や言語的原理への深い理解を組み合わせています。"
+    },
+    "experience_title": "実務経験",
+    "skills_title": "スキル ＆ テクノロジー",
+    "studies_title": "現在の学習",
+    "status_active": "在学中",
+    "status_completed": "完了済",
+    "badges": {
+      "developer": "フルスタック開発者",
+      "designer": "UI/UXデザイナー",
+      "author": "著者",
+      "student": "複数大学在籍中"
+    },
+    "book": {
+      "title": "私の著書",
+      "name": "「1日で1つの会話」",
+      "subtitle": "日本語会話ガイド",
+      "readers": "読者",
+      "rating": "評価",
+      "buy": "購入する",
+      "read_online": "オンラインで読む"
+    }
+  },
+  "Education": {
+    "title": "教育",
+    "universities": "大学",
+    "courses": "専門コース",
+    "status_active": "在学中",
+    "status_completed": "完了済",
+    "visit": "大学を訪問する",
+    "gpa": "GPA",
+    "achievements": "実績:",
+    "skills_gained": "習得したスキル:",
+    "certificate_earned": "証明書取得済み",
+    "view_certificate": "証明書を表示"
+  },
+  "Contact": {
+    "title": "お問い合わせ",
+    "hero_title": "お問い合わせ",
+    "hero_subtitle": "一緒に働きませんか？以下のフォームに入力するか、SNSでお問い合わせください。",
+    "info_title": "連絡先情報",
+    "social_title": "ソーシャルメディア",
+    "form_title": "メッセージを送る",
+    "name_label": "氏名 *",
+    "name_placeholder": "お名前...",
+    "email_label": "メールアドレス *",
+    "email_placeholder": "example@gmail.com",
+    "subject_label": "件名 *",
+    "subject_placeholder": "件名を選択してください",
+    "budget_label": "プロジェクト予算（任意）",
+    "budget_placeholder": "予算範囲を選択してください",
+    "message_label": "メッセージ *",
+    "message_placeholder": "プロジェクトについて教えてください...",
+    "send_button": "メッセージを送信",
+    "success": "✅ メッセージが正常に送信されました！",
+    "error": "❌ エラーが発生しました。もう一度やり直してください。",
+    "success_modal_title": "成功！",
+    "close_button": "閉じる",
+    "subjects": {
+      "web": "ウェブ開発プロジェクト",
+      "mobile": "モバイルアプリ開発",
+      "design": "UI/UXデザイン",
+      "consultation": "コンサルテーション",
+      "collaboration": "コラボレーション",
+      "other": "その他"
+    },
+    "budgets": {
+      "under_1000": "$1,000未満",
+      "1000_5000": "$1,000 - $5,000",
+      "5000_10000": "$5,000 - $10,000",
+      "10000_plus": "$10,000以上",
+      "discuss": "相談しましょう"
+    }
+  },
+  "Blog": {
+    "title": "ブログ",
+    "hero_title": "最新の記事",
+    "hero_subtitle": "IT、プログラミング、自己啓発に関する私の考え。",
+    "read_more": "続きを読む..."
+  },
+  "Work": {
+    "title": "プロジェクト",
+    "hero_title": "マイプロジェクト",
+    "hero_subtitle": "UI/UXデザインとウェブ開発の私の作品。",
+    "all_projects": "すべてのプロジェクト",
+    "view_project": "詳細を見る",
+    "stats": {
+      "total_projects": "合計プロジェクト",
+      "happy_clients": "満足したクライアント",
+      "completed": "完了済み",
+      "success_rate": "成功率"
+    },
+    "categories": {
+      "all": "すべてのプロジェクト",
+      "web": "ウェブ開発",
+      "mobile": "モバイルアプリ",
+      "design": "UI/UXデザイン",
+      "ai": "AI/ML",
+      "graphics": "デザイン"
+    },
+    "ProjectDetail": {
+      "back": "プロジェクトに戻る",
+      "about": "プロジェクトについて",
+      "technologies": "使用技術",
+      "features": "主な特徴",
+      "details": "詳細",
+      "status": "ステータス",
+      "year": "年度",
+      "completed": "完了",
+      "live_demo": "ライブデモ",
+      "github_code": "GITHUBコード",
+      "need_project": "プロジェクトが必要ですか？",
+      "contact_me": "お問い合わせ",
+      "contact": "連絡先",
+      "loading": "読み込み中...",
+      "not_found": "プロジェクトが見つかりません"
+    }
+  }
+}

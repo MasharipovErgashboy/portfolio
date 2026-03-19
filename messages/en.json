@@ -1,0 +1,154 @@
+{
+  "Sidebar": {
+    "overview": "Overview",
+    "work": "Work",
+    "education": "Education",
+    "blog": "Blog",
+    "contact": "Contact",
+    "contact_title": "Contact",
+    "follow_title": "Follow",
+    "language_title": "Language",
+    "role": "Full Stack Developer",
+    "badge": "Multi-University Student",
+    "download_cv": "Download CV",
+    "contact_btn": "Contact",
+    "page_subtitles": {
+      "overview": "Personal information and skills overview",
+      "work": "Portfolio of projects and achievements",
+      "education": "Academic background and certifications",
+      "blog": "Latest thoughts and insights",
+      "contact": "Get in touch with me"
+    }
+  },
+  "Overview": {
+    "stats": {
+      "total_projects": "Total Projects",
+      "happy_clients": "Happy Clients",
+      "completed": "Completed",
+      "success_rate": "Success Rate"
+    },
+    "about": {
+      "title": "About Me",
+      "focus": "Current Focus",
+      "available": "Available For",
+      "subtitle": "Full Stack Developer & UI/UX Designer",
+      "description1": "Creating innovative digital solutions while pursuing degrees in IT, Psychology, and Linguistics across Japan and Uzbekistan. Author of Japanese learning book with 500+ readers.",
+      "description2": "I specialize in full-stack development, UI/UX design, and creating educational platforms that bridge language barriers and cultural gaps. My work combines technical expertise with deep understanding of user psychology and linguistic principles."
+    },
+    "experience_title": "Professional Experience",
+    "skills_title": "Skills & Technologies",
+    "studies_title": "Current Studies",
+    "status_active": "Active",
+    "status_completed": "Completed",
+    "badges": {
+      "developer": "Full Stack Developer",
+      "designer": "UI/UX Designer",
+      "author": "Author",
+      "student": "Multi-University Student"
+    },
+    "book": {
+      "title": "My Personal Book",
+      "name": "\"One Conversation in One Day\"",
+      "subtitle": "A guide to Japanese conversation",
+      "readers": "Readers",
+      "rating": "Rating",
+      "buy": "Buy Now",
+      "read_online": "Read Online"
+    }
+  },
+  "Education": {
+    "title": "Education",
+    "universities": "Universities",
+    "courses": "Professional Courses",
+    "status_active": "Active",
+    "status_completed": "Completed",
+    "visit": "Visit University",
+    "gpa": "GPA",
+    "achievements": "Achievements:",
+    "skills_gained": "Skills Gained:",
+    "certificate_earned": "Certificate Earned",
+    "view_certificate": "View Certificate"
+  },
+  "Contact": {
+    "title": "Contact",
+    "hero_title": "Get in Touch",
+    "hero_subtitle": "Interested in working together? Fill out the form below or reach out via social media.",
+    "info_title": "Contact Info",
+    "social_title": "Social Media",
+    "form_title": "Send Message",
+    "name_label": "Full Name *",
+    "name_placeholder": "Your name...",
+    "email_label": "Email Address *",
+    "email_placeholder": "example@gmail.com",
+    "subject_label": "Subject *",
+    "subject_placeholder": "Select a subject",
+    "budget_label": "Project Budget (Optional)",
+    "budget_placeholder": "Select budget range",
+    "message_label": "Message *",
+    "message_placeholder": "Tell me about your project...",
+    "send_button": "Send Message",
+    "success": "Message sent successfully!",
+    "error": "An error occurred. Please try again.",
+    "success_modal_title": "Success!",
+    "close_button": "Close",
+    "subjects": {
+      "web": "Web Development Project",
+      "mobile": "Mobile App Development",
+      "design": "UI/UX Design",
+      "consultation": "Consultation",
+      "collaboration": "Collaboration",
+      "other": "Other"
+    },
+    "budgets": {
+      "under_1000": "Under $1,000",
+      "1000_5000": "$1,000 - $5,000",
+      "5000_10000": "$5,000 - $10,000",
+      "10000_plus": "$10,000+",
+      "discuss": "Let's discuss"
+    }
+  },
+  "Blog": {
+    "title": "Blog",
+    "hero_title": "Latest Articles",
+    "hero_subtitle": "My thoughts on IT, programming, and personal development.",
+    "read_more": "Read more..."
+  },
+  "Work": {
+    "title": "Projects",
+    "hero_title": "My Projects",
+    "hero_subtitle": "My works in UI/UX design and web development.",
+    "all_projects": "All Projects",
+    "view_project": "View Project",
+    "stats": {
+      "total_projects": "Total Projects",
+      "happy_clients": "Happy Clients",
+      "completed": "Completed",
+      "success_rate": "Success Rate"
+    },
+    "categories": {
+      "all": "All Projects",
+      "web": "Web Development",
+      "mobile": "Mobile Apps",
+      "design": "UI/UX Design",
+      "ai": "AI/ML",
+      "graphics": "Design"
+    },
+    "ProjectDetail": {
+      "back": "BACK TO PROJECTS",
+      "about": "About Project",
+      "technologies": "Technologies",
+      "features": "Key Features",
+      "details": "Details",
+      "status": "Status",
+      "year": "Year",
+      "completed": "Completed",
+      "live_demo": "LIVE DEMO",
+      "github_code": "GITHUB CODE",
+      "need_project": "NEED A PROJECT?",
+      "contact_me": "Contact me",
+      "contact": "Contact",
+      "loading": "Loading...",
+      "not_found": "Project not found"
+    }
+  }
+}

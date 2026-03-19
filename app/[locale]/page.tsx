@@ -3,13 +3,15 @@
 import PortfolioLayout from "@/components/portfolio/portfolio-layout"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
+import { useLocale } from "next-intl"
 
 export default function HomePage() {
   const router = useRouter()
+  const locale = useLocale()
 
   useEffect(() => {
-    router.push("/overview")
-  }, [router])
+    router.push(`/${locale}/overview`)
+  }, [router, locale])
 
   return (
     <PortfolioLayout>

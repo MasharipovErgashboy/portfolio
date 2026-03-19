@@ -7,43 +7,49 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import PortfolioLayout from "@/components/portfolio/portfolio-layout"
+import { useLocale, useTranslations } from "next-intl"
+import useSWR from "swr"
+import { getBlogPosts, getBlogCategories } from "@/lib/api"
 
 export default function BlogPage() {
+  const t = useTranslations("Blog")
+  const locale = useLocale()
   const [blogFilter, setBlogFilter] = useState("all")
+  const { data: blogsData } = useSWR(`blogs-${locale}`, () => getBlogPosts().then(res => res.data))
+  const { data: categoriesData } = useSWR(`blog-categories-${locale}`, () => getBlogCategories().then(res => res.data))
   
-  const blogPosts = [
-    {
-      title: "ICT Week 2025: O‘zbekiston–Yaponiya Forumi va Global Expo",
-      excerpt:
-        "Bugungi ICT Week doirasidagi O‘zbekiston–Yaponiya forumi va dunyoning yirik kompaniyalari taqdimotlari hamda innovatsion mahsulotlar ko‘rgazmasi haqida taassurotlarim",
-      date: "2025-09-24",
-      category: "technology",
-      readTime: "5 min read",
-      image: "/photo_2025-09-24_16-23-47.jpg",
-      telegramUrl: "https://www.instagram.com/iam_masharipov/",
-    },
-
-    {
-      title: "My Journey Across Three Universities",
-      excerpt:
-        "How I'm managing simultaneous studies in IT, Psychology, and Linguistics across Japan and Uzbekistan",
-      date: "2025-09-13",
-      category: "personal",
-      readTime: "5 min read",
-      image: "/kkkk.png",
-      telegramUrl: "https://t.me/su_academya",
-    },
-  ]
+  const fetchedBlogs = Array.isArray(blogsData) ? blogsData : (blogsData?.results || [])
+  const fetchedCategories = Array.isArray(categoriesData) ? categoriesData : (categoriesData?.results || [])
+  
+  const getLocalized = (item: any, field: string) => {
+    if (!item) return ""
+    if (locale === "uz") return item[field]
+    const localizedField = `${field}_${locale}`
+    return item[localizedField] || item[field]
+  }
 
   const blogCategories = [
-    { id: "all", label: "All Posts" },
-    { id: "personal", label: "Personal" },
-    { id: "education", label: "Education" },
-    { id: "technology", label: "Technology" },
+    { id: "all", name: locale === "uz" ? "Barchasi" : (locale === "ru" ? "Все" : (locale === "jp" ? "すべて" : "All")), value: "all" },
+    ...fetchedCategories.map((c: any) => ({
+      id: c.id,
+      name: getLocalized(c, 'name'),
+      value: c.name // We use original name for filtering or ID
+    }))
   ]
 
+  const blogs = fetchedBlogs.map((b: any) => ({
+    title: getLocalized(b, 'title'),
+    excerpt: getLocalized(b, 'excerpt'),
+    date: b.date,
+    category: getLocalized(b, 'category_name'),
+    category_raw: b.category_name, // original for filtering
+    readTime: b.read_time,
+    image: b.image,
+    telegramUrl: b.telegram_url || b.github_link || "https://t.me/su_academya"
+  }))
+
   const filteredBlogs =
-    blogFilter === "all" ? blogPosts : blogPosts.filter((post) => post.category === blogFilter)
+    blogFilter === "all" ? blogs : blogs.filter((post: any) => post.category_raw === blogFilter)
 
   return (
     <PortfolioLayout>
@@ -58,23 +64,21 @@ export default function BlogPage() {
           <CardContent className="p-6">
             <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-4">
               <Filter className="w-6 h-6" />
-              <h3 className="text-xl font-bold">Blog Categories</h3>
+              <h3 className="text-xl font-bold">{t("hero_title")}</h3>
             </div>
             <div className="flex flex-wrap gap-3">
               {blogCategories.map((category) => (
-                <Button
+                <button
                   key={category.id}
-                  variant={blogFilter === category.id ? "secondary" : "outline"}
-                  size="sm"
-                  onClick={() => setBlogFilter(category.id)}
-                  className={`text-xs h-8 px-3 ${
-                    blogFilter === category.id
-                      ? "bg-white text-orange-600 hover:bg-gray-100"
+                  onClick={() => setBlogFilter(category.value)}
+                  className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300 border ${
+                    blogFilter === category.value
+                      ? "bg-white text-orange-600 border-white"
                       : "border-white/30 text-white hover:bg-white/10 bg-transparent"
                   }`}
                 >
-                  {category.label}
-                </Button>
+                  {category.name}
+                </button>
               ))}
             </div>
           </CardContent>
@@ -82,7 +86,7 @@ export default function BlogPage() {
 
         {/* Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {filteredBlogs.map((post, index) => (
+          {filteredBlogs.map((post: any, index: number) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -99,14 +103,8 @@ export default function BlogPage() {
                   />
                   <div className="absolute top-3 left-3">
                     <Badge
-                      variant={
-                        post.category === "personal"
-                          ? "default"
-                          : post.category === "education"
-                          ? "secondary"
-                          : "outline"
-                      }
-                      className="text-xs capitalize shadow-sm"
+                      variant="secondary"
+                      className="text-xs uppercase shadow-sm"
                     >
                       {post.category}
                     </Badge>
@@ -138,7 +136,7 @@ export default function BlogPage() {
                       }
                     }}
                   >
-                    Read More
+                    {t("read_more")}
                   </Button>
                 </CardContent>
               </Card>

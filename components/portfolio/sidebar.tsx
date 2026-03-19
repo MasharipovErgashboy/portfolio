@@ -11,8 +11,12 @@ import {
   Github,
   Linkedin,
   Instagram,
+  X,
 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { useTranslations } from "next-intl"
+import { usePathname, useRouter } from "next/navigation"
 
 interface Tab {
   id: string
@@ -36,12 +40,16 @@ export default function Sidebar({
   setSidebarExpanded,
   isMobile,
 }: SidebarProps) {
+  const t = useTranslations("Sidebar")
+  const pathname = usePathname()
+  const router = useRouter()
+
   const tabs: Tab[] = [
-    { id: "overview", label: "Overview", icon: User, color: "text-blue-600" },
-    { id: "work", label: "Work", icon: Briefcase, color: "text-purple-600" },
-    { id: "education", label: "Education", icon: GraduationCap, color: "text-green-600" },
-    { id: "blog", label: "Blog", icon: BookOpen, color: "text-orange-600" },
-    { id: "contact", label: "Contact", icon: Mail, color: "text-red-600" },
+    { id: "overview", label: t("overview"), icon: User, color: "text-blue-600" },
+    { id: "work", label: t("work"), icon: Briefcase, color: "text-purple-600" },
+    { id: "education", label: t("education"), icon: GraduationCap, color: "text-green-600" },
+    { id: "blog", label: t("blog"), icon: BookOpen, color: "text-orange-600" },
+    { id: "contact", label: t("contact"), icon: Mail, color: "text-red-600" },
   ]
 
   return (
@@ -55,35 +63,50 @@ export default function Sidebar({
       <motion.div
         initial={false}
         animate={{
-          width: sidebarExpanded ? (isMobile ? 280 : 320) : isMobile ? 0 : 80,
-          x: isMobile && !sidebarExpanded ? -280 : 0,
+          width: sidebarExpanded ? (isMobile ? "100%" : 320) : isMobile ? 0 : 80,
+          x: isMobile && !sidebarExpanded ? "-100%" : 0,
         }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed left-0 top-0 h-full bg-white dark:bg-gray-800 shadow-2xl z-40 overflow-y-auto border-r border-gray-200 dark:border-gray-700"
+        transition={{ type: "spring", damping: 25, stiffness: 200 }}
+        className="fixed left-0 top-0 h-full bg-white dark:bg-gray-800 shadow-2xl z-40 overflow-y-auto border-r border-gray-200 dark:border-gray-700 md:max-w-[320px]"
       >
-        <div className="p-3 sm:p-4">
+        <div className="p-4 sm:p-6 min-h-full flex flex-col">
+          {/* Close Button Mobile */}
+          {isMobile && sidebarExpanded && (
+            <div className="flex justify-end mb-2">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={() => setSidebarExpanded(false)}
+                className="hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
+                <X className="w-6 h-6" />
+              </Button>
+            </div>
+          )}
+
           {/* Profile Section - Expanded */}
           {sidebarExpanded && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="text-center mb-4 sm:mb-8 mt-2 sm:mt-4"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              className="text-center mb-6 sm:mb-10"
             >
-              <div className="relative w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-[2px] shadow-xl hover:scale-105 transition-transform duration-300">
-                <div className="w-full h-full rounded-full bg-white overflow-hidden">
+              <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 p-1 rounded-full bg-gradient-to-tr from-blue-600 via-indigo-500 to-purple-600 shadow-xl">
+                <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 overflow-hidden border-4 border-white dark:border-gray-800">
                   <img
                     src="/kkkk.png"
-                    alt="User"
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    alt="Masharipov Ergashboy"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </div>
               </div>
-              <h1 className="text-sm sm:text-lg font-bold text-gray-900 dark:text-white">Masharipov Ergashboy</h1>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-2">Full Stack Developer</p>
-              <Badge variant="outline" className="text-xs">
-                Multi-University Student
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white tracking-tight">
+                Masharipov Ergashboy
+              </h1>
+              <p className="text-sm font-medium text-blue-600 dark:text-blue-400 mt-1 mb-3">{t("role")}</p>
+              <Badge className="bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800 hover:bg-blue-100 px-3 py-1">
+                {t("badge")}
               </Badge>
             </motion.div>
           )}
@@ -93,19 +116,17 @@ export default function Sidebar({
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="text-center mb-8 mt-4"
+              className="text-center mb-10"
             >
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-lg text-white shadow-lg">
+              <div className="w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-xl text-white shadow-lg">
                 👨‍💻
               </div>
             </motion.div>
           )}
 
           {/* Navigation Menu */}
-          <div className="py-2 sm:py-4 overflow-y-auto">
-            <ul className="space-y-1 sm:space-y-2 font-medium">
+          <nav className="flex-1">
+            <ul className="space-y-1 sm:space-y-2">
               {tabs.map((tab) => (
                 <li key={tab.id}>
                   <button
@@ -113,28 +134,23 @@ export default function Sidebar({
                       setActiveTab(tab.id)
                       if (isMobile) setSidebarExpanded(false)
                     }}
-                    className={`w-full flex items-center ${
-                      sidebarExpanded ? "justify-start" : "justify-center"
-                    } p-2 sm:p-3 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group transition-colors ${
-                      activeTab === tab.id ? "bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300" : ""
+                    className={`nav-item w-full flex items-center ${
+                      sidebarExpanded ? "justify-start px-4" : "justify-center"
+                    } py-3 sm:py-3.5 rounded-xl transition-all duration-200 ${
+                      activeTab === tab.id 
+                        ? "bg-blue-600 text-white shadow-md active-tab" 
+                        : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700/50"
                     }`}
-                    title={!sidebarExpanded ? tab.label : ""}
                   >
                     <tab.icon
-                      className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white ${
-                        activeTab === tab.id ? tab.color : ""
-                      } ${sidebarExpanded ? "mr-2 sm:mr-3" : ""}`}
+                      className={`w-5 h-5 sm:w-6 sm:h-6 ${
+                        activeTab === tab.id ? "text-white" : "text-gray-500 group-hover:text-blue-600"
+                      } ${sidebarExpanded ? "mr-3" : ""}`}
                     />
                     {sidebarExpanded && (
-                      <motion.span
-                        initial={{ opacity: 0, width: 0 }}
-                        animate={{ opacity: 1, width: "auto" }}
-                        exit={{ opacity: 0, width: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="text-xs sm:text-base"
-                      >
+                      <span className="font-semibold text-base">
                         {tab.label}
-                      </motion.span>
+                      </span>
                     )}
                   </button>
                 </li>
@@ -143,86 +159,68 @@ export default function Sidebar({
 
             {/* Contact Info - Expanded Only */}
             {sidebarExpanded && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2, delay: 0.1 }}
-                className="mt-4 sm:mt-8 pt-3 sm:pt-6 border-t border-gray-200 dark:border-gray-600"
-              >
-                <h3 className="font-semibold text-gray-900 dark:text-white text-xs sm:text-sm uppercase tracking-wide mb-2 sm:mb-4">
-                  Contact
+              <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-100 dark:border-gray-700">
+                <h3 className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4 px-2">
+                  {t("contact_title")}
                 </h3>
-                <div className="space-y-1 sm:space-y-3">
-                  <div className="flex items-center p-1 sm:p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <Mail className="w-3 h-3 sm:w-5 sm:h-5 text-gray-500 dark:text-gray-400 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-xs sm:text-sm truncate">ergashmasharipov88@gmail.com</span>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors group cursor-pointer">
+                    <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-blue-600 dark:text-blue-400">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300 truncate">ergashmasharipov88@gmail.com</span>
                   </div>
-                  <div className="flex items-center p-1 sm:p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <Phone className="w-3 h-3 sm:w-5 sm:h-5 text-gray-500 dark:text-gray-400 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-xs sm:text-sm">+998 88 709 50 66</span>
+                  <div className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors group cursor-pointer">
+                    <div className="p-2 bg-green-50 dark:bg-green-900/20 rounded-lg text-green-600 dark:text-green-400">
+                      <Phone className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">+998 88 709 50 66</span>
                   </div>
-                  <div className="flex items-center p-1 sm:p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <MapPin className="w-3 h-3 sm:w-5 sm:h-5 text-gray-500 dark:text-gray-400 mr-2 sm:mr-3 flex-shrink-0" />
-                    <span className="text-xs sm:text-sm">Uzbekistan / Tashkent</span>
+                  <div className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors group cursor-pointer">
+                    <div className="p-2 bg-red-50 dark:bg-red-900/20 rounded-lg text-red-600 dark:text-red-400">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Uzbekistan / Tashkent</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2, delay: sidebarExpanded ? 0.2 : 0 }}
-              className={`${sidebarExpanded ? "mt-3 sm:mt-6" : "mt-6 sm:mt-8"}`}
-            >
-              {sidebarExpanded && (
-                <h3 className="font-semibold text-gray-900 dark:text-white text-xs sm:text-sm uppercase tracking-wide mb-2 sm:mb-4">
-                  Follow
+            {sidebarExpanded && (
+              <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
+                <h3 className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4 px-2">
+                  {t("follow_title")}
                 </h3>
-              )}
-              <div className={`${sidebarExpanded ? "space-y-1 sm:space-y-2" : "space-y-2 sm:space-y-3"}`}>
-                <button
-                  onClick={() => window.open("https://github.com/MasharipovErgashboy")}
-                  className={`w-full flex items-center ${
-                    sidebarExpanded ? "justify-start" : "justify-center"
-                  } p-1 sm:p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group`}
-                  title={!sidebarExpanded ? "GitHub" : ""}
-                >
-                  <Github
-                    className={`w-3 h-3 sm:w-5 sm:h-5 text-gray-500 dark:text-gray-400 ${sidebarExpanded ? "mr-2 sm:mr-3" : ""}`}
-                  />
-                  {sidebarExpanded && <span className="text-xs sm:text-sm">GitHub</span>}
-                </button>
-                <button
-                  onClick={() => window.open("https://linkedin.com/in/ergashboy-masharipov-0a9820298")}
-                  className={`w-full flex items-center ${
-                    sidebarExpanded ? "justify-start" : "justify-center"
-                  } p-1 sm:p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group`}
-                  title={!sidebarExpanded ? "LinkedIn" : ""}
-                >
-                  <Linkedin
-                    className={`w-3 h-3 sm:w-5 sm:h-5 text-gray-500 dark:text-gray-400 ${sidebarExpanded ? "mr-2 sm:mr-3" : ""}`}
-                  />
-                  {sidebarExpanded && <span className="text-xs sm:text-sm">LinkedIn</span>}
-                </button>
-                <button
-                  onClick={() => window.open("https://www.instagram.com/iam_masharipov/")}
-                  className={`w-full flex items-center ${
-                    sidebarExpanded ? "justify-start" : "justify-center"
-                  } p-1 sm:p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group`}
-                  title={!sidebarExpanded ? "Instagram" : ""}
-                >
-                  <Instagram
-                    className={`w-3 h-3 sm:w-5 sm:h-5 text-gray-500 dark:text-gray-400 ${sidebarExpanded ? "mr-2 sm:mr-3" : ""}`}
-                  />
-                  {sidebarExpanded && <span className="text-xs sm:text-sm">Instagram</span>}
-                </button>
+                <div className="flex items-center gap-2 px-2">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => window.open("https://github.com/MasharipovErgashboy")}
+                    className="w-10 h-10 rounded-xl border-gray-200 dark:border-gray-700 hover:text-blue-600 transition-all shadow-sm"
+                  >
+                    <Github className="w-5 h-5" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => window.open("https://linkedin.com/in/ergashboy-masharipov-0a9820298")}
+                    className="w-10 h-10 rounded-xl border-gray-200 dark:border-gray-700 hover:text-blue-600 transition-all shadow-sm"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => window.open("https://www.instagram.com/iam_masharipov/")}
+                    className="w-10 h-10 rounded-xl border-gray-200 dark:border-gray-700 hover:text-blue-600 transition-all shadow-sm"
+                  >
+                    <Instagram className="w-5 h-5" />
+                  </Button>
+                </div>
               </div>
-            </motion.div>
-          </div>
+            )}
+          </nav>
         </div>
       </motion.div>
     </>
