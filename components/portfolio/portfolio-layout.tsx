@@ -94,7 +94,7 @@ export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
         animate={{
           marginLeft: isMobile ? 0 : (sidebarExpanded ? 320 : 80),
         }}
-        transition={{ 
+        transition={isMobile ? { duration: 0 } : { 
           type: "spring", 
           damping: 30, 
           stiffness: 300,

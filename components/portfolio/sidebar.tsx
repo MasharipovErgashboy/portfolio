@@ -66,7 +66,7 @@ export default function Sidebar({
           width: isMobile ? "280px" : (sidebarExpanded ? 320 : 80),
           x: isMobile ? (sidebarExpanded ? 0 : "-100%") : 0,
         }}
-        transition={{ 
+        transition={isMobile ? { duration: 0 } : { 
           type: "spring", 
           damping: 30, 
           stiffness: 300,
