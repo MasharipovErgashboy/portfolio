@@ -61,12 +61,17 @@ export default function Sidebar({
 
       {/* Sidebar */}
       <motion.div
-        initial={false}
+        initial={isMobile ? { x: "-100%" } : false}
         animate={{
-          width: sidebarExpanded ? (isMobile ? "100%" : 320) : isMobile ? 0 : 80,
-          x: isMobile && !sidebarExpanded ? "-100%" : 0,
+          width: isMobile ? "280px" : (sidebarExpanded ? 320 : 80),
+          x: isMobile ? (sidebarExpanded ? 0 : "-100%") : 0,
         }}
-        transition={{ type: "spring", damping: 25, stiffness: 200 }}
+        transition={{ 
+          type: "spring", 
+          damping: 30, 
+          stiffness: 300,
+          mass: 0.8
+        }}
         className="fixed left-0 top-0 h-full bg-white dark:bg-gray-800 shadow-2xl z-40 overflow-y-auto border-r border-gray-200 dark:border-gray-700 md:max-w-[320px]"
       >
         <div className="p-4 sm:p-6 min-h-full flex flex-col">

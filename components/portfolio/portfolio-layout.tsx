@@ -92,9 +92,14 @@ export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
       <motion.div
         initial={false}
         animate={{
-          marginLeft: isMobile ? 0 : sidebarExpanded ? 320 : 80,
+          marginLeft: isMobile ? 0 : (sidebarExpanded ? 320 : 80),
         }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{ 
+          type: "spring", 
+          damping: 30, 
+          stiffness: 300,
+          mass: 0.8
+        }}
         className="min-h-screen"
       >
         <div className="sticky top-0 z-30 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-700 px-3 sm:px-6 py-2 sm:py-4">
